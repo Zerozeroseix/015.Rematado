@@ -18,11 +18,11 @@ class Workout {
 
   // 240. Rendering Workouts
   _setDescription() {
-    // Dizer-lhe a preetir que ignore a seguinte linha
+    // Dizer-lhe a prettier que ignore a seguinte linha
     // prettier-ignore
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     // prettier-ignore
-    this.descritption = `${this.type[0].toUpperCase()}${this.type.slice(1)} on ${months[this.date.getMonth()]} ${this.date.getDate()}`;
+    this.description = `${this.type[0].toUpperCase()}${this.type.slice(1)} on ${months[this.date.getMonth()]} ${this.date.getDate()}`;
   }
   // 241. Move to Marker On Click
   click() {
@@ -106,9 +106,9 @@ class App {
     if (navigator.geolocation) {
       // Método de geolocation.getCurrentPosition(f1, f2)
       navigator.geolocation.getCurrentPosition(
-        // 1ª funçom em caso de éxito
+        // 1ª funçom em caso de êxito
         this._loadMap.bind(this),
-        // 2ª funçom em caso de fracaso
+        // 2ª funçom em caso de fracasso
         function () {
           alert('Could not get your position');
         }
@@ -117,7 +117,7 @@ class App {
   }
 
   _loadMap(position) {
-    // As coordesnadas que recolho de geolocation.getCurrentPosition()
+    // As coordenadas que recolho de geolocation.getCurrentPosition()
     const { latitude } = position.coords;
     const { longitude } = position.coords;
     const coords = [latitude, longitude];
